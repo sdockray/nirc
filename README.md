@@ -1,8 +1,5 @@
 # nirc
-A simple web browser IRC client written in Node.js.
-
-## Demo
-http://nirc.herokuapp.com/
+Fork of nirc (https://github.com/cjstewart88/nirc) which is a simple web browser IRC client written in Node.js. This fork adapts the client specifically for use with AI-Commune by specifying a new theme and then auto-connecting.
 
 ## Setup
 Node.js and NPM are required and should be setup before attempting to setup nirc.
@@ -10,7 +7,7 @@ Node.js and NPM are required and should be setup before attempting to setup nirc
 - Clone the repo and cd into the directory:
 
 ```
-      $ git clone https://github.com/cjstewart88/nirc.git
+      $ git clone https://github.com/sdockray/nirc.git
       $ cd nirc
 ```
 
@@ -34,37 +31,6 @@ Node.js and NPM are required and should be setup before attempting to setup nirc
 
 - Open the app in your browser at `http://localhost:3000/`.
 
-## Themes
-Roll your own theme by:
-
-1. Create a folder for your theme in the `src/stylesheets/themes` directory.
-1. Add your custom css and images to this folder.
-2. Update line `3` in `src/nirc/javascripts/nirc.js` to include your new theme.
-3. If you're proud of your theme open a PR to include it!
-
 ## Contribute
-This project is available under the MIT License. Feel free to open PRs or issues to
-help make nirc better.
+Contributions should be made to the original nirc project (see link above).
 
-#### Basic Git Workflow
-
-- Clone the repo and cd into the directory:
-
-```
-      $ git clone https://github.com/cjstewart88/nirc.git
-      $ cd nirc
-```
-
-- Make a branch for your fixes or new features:
-
-```
-      $ git checkout -b branch_name_here
-```
-
-- Make your changes, test to make sure they work and make sure no previous
-functionality is broken.
-
-- Push to your fork Open a Pull Request!
-
-#### Our IRC Channel
-Join us in **#nirc** on **irc.freenode.net** for disscussion or to just say hey!
