@@ -3,7 +3,7 @@ angular.module('nirc', ['ngSanitize'])
     $locationProvider.html5Mode(true);
   })
   .controller('RootCtrl', function($scope, $location) {
-    $scope.themes = ['classic', 'night', 'paper'];
+    $scope.themes = ['classic', 'night', 'paper', 'ai'];
     $scope.theme  = $location.search().theme || $scope.themes[0];
 
     $scope.setTheme = function(t) {
@@ -18,6 +18,7 @@ angular.module('nirc', ['ngSanitize'])
     $scope.connect = function() {
       $scope.config.save();
       $scope.client.connect($scope.config);
+      //Client.setActive($scope.client.channels[$scope.client.channels.length-1]);
     };
 
     Mousetrap.bind('command+left', function(e) {

@@ -1,5 +1,5 @@
 <ul class="tabbar" ng-controller="TabCtrl">
-  <li class="logo">
+  <li class="logo hidden">
     nIRC
     <a class="dropdown-toggle" href ng-click="toggleExpand()">
       <i class="fa fa-fw"
@@ -7,7 +7,7 @@
     </a>
   </li>
   <li ng-class="{active: isActive(client.statusChannel)}"
-      ng-show="expanded || isActive(client.statusChannel)" class="channel-tab">
+      ng-show="expanded || isActive(client.statusChannel)" class="channel-tab hidden">
     <a href ng-click="setActive(client.statusChannel)" class="channel">
       <i class="fa fa-fw" ng-class="iconFor(client.statusChannel)"></i>
       status
@@ -15,7 +15,7 @@
   </li>
   <li ng-repeat="channel in client.channels" ng-class="{active: isActive(channel)}"
       class="channel-tab" ng-show="expanded || isActive(channel)">
-    <a href ng-click="setActive(channel)" class="channel">
+    <a href data-ng-init="setActive(channel)" ng-click="setActive(channel)" class="channel">
       <i class="fa fa-fw" ng-class="iconFor(channel)"></i>
       {{channel.name}}
     </a>
@@ -23,8 +23,8 @@
       <i class="fa fa-fw fa-times"></i>
     </a>
   </li>
-  <li class="theme-selector" ng-show="expanded">
-    <select ng-model="theme" ng-options="t for t in themes" ng-change="setTheme(theme)">
+  <li class="theme-selector hidden" ng-show="expanded">
+    <select ng-model="theme" data-ng-init="setTheme('ai')" ng-options="t for t in themes" ng-change="setTheme(theme)">
     </select>
   </li>
 </ul>

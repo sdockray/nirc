@@ -6,8 +6,9 @@ html, body, .wrapper, .content {
   height: 100%;
 }
 
-* {
-  -moz-box-sizing: border-box;
+*, *:before, *:after {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
   box-sizing: border-box;
 }
 
@@ -17,6 +18,10 @@ body {
 }
 
 textarea, input { outline: none; }
+
+ul.tabbar li.hidden {
+  display: none;
+}
 
 .overlay {
   position: absolute;
@@ -83,6 +88,7 @@ textarea, input { outline: none; }
 .wrapper {
   padding-top: $tabbarHeight;
   padding-bottom: $inputHeight;
+  margin: .5em;
 }
 
 .user-input {
@@ -100,15 +106,19 @@ textarea, input { outline: none; }
 .content {
   list-style: none;
   width: 100%;
-  padding: 5px;
-  padding-right: $userWidth + 5px;
   overflow: auto;
-  margin: 0;
-
-  @media (max-width: 480px) {
-    padding: 4px;
-    padding-top: $tabbarHeight;
+  
+  @media(max-width: 480px) {
+    padding: 1.25em;
     overflow-wrap: break-word;
+    margin: 0 0 .5em 0;
+  }
+
+  @media(min-width: 480px) {
+    padding-top: $tabbarHeight;
+    padding: 4px;
+    margin: 0;
+    padding-right: $userWidth + 5px;
   }
 
   li {
@@ -122,15 +132,18 @@ textarea, input { outline: none; }
   right: 0;
   bottom: $inputHeight;
   margin: 0;
-  padding: 0;
-  padding-bottom: 20px;
+  padding: 1.25em;
+  /*padding-bottom: 20px;*/
 
   @media(max-width: 480px) {
     display: none;
   }
 
-  top: $tabbarHeight;
-  width: $userWidth;
+  @media(min-width: 480px) {
+    top: $tabbarHeight;
+    width: $userWidth;
+  }
+  
   overflow: auto;
   list-style: none;
   li {
