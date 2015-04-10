@@ -141,7 +141,9 @@ angular.module('nirc')
             new User(d.receiver),
             d.message
           );
-
+      if (Client.activeChannel!=Client.statusChannel) {
+        event.delay = 100;
+      }
       Client.addEvent(event);
     });
 

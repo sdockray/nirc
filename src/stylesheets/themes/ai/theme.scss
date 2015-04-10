@@ -3,8 +3,8 @@
 body {
   font-family: Inconsolata, monospace;
   font-size: 62.5%;
-  color: #999;
-  background: #f7f7f7;
+  color: #000;
+  background: #F7E806;
 }
 
 .overlay {
@@ -57,13 +57,13 @@ body {
 }
 
 .tabbar {
-  color: #999;
-  background: #f7f7f7;
+  color: #450C0C;
+  background: #F7E806;
   li {
     &.active {
       a.channel {
         font-weight: bold;
-        color: #666;
+        color: #9E099A;
       }
     }
 
@@ -94,15 +94,15 @@ body {
   }
 
   .mention {
-    background: #fffff0;
+    background: #B1FA11;
   }
   .timestamp {
-    color: #999;
+    color: #F47945;
   }
 
   .sender {
     font-weight: bold;
-    color: #666;
+    color: #9E099A;
   }
 
   .message {
@@ -119,12 +119,12 @@ body {
 .users {
   li {
     a {
-      color: #999;
+      color: #333;
       text-decoration: none;
       transition: color 0.25s ease-in-out;
 
       &:hover {
-        color: #666;
+        color: #111;
       }
     }
   }
@@ -133,7 +133,7 @@ body {
 .user-input {
   font-family: Inconsolata, monospace;
   font-size: 12px;
-  background: #f7f7f7;
+  background: #F0F7A7;
   color: #666;
   border: none;
   border-top: 1px solid #f0f0f0;

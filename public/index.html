@@ -8,6 +8,8 @@
     <script src='/javascripts/vendor/mousetrap.min.js'></script>
     <script src='/javascripts/vendor/angular.min.js'></script>
     <script src='/javascripts/vendor/angular-sanitize.min.js'></script>
+    <script src='/javascripts/vendor/angular-typewrite.js'></script>
+    <script src='/javascripts/vendor/lodash.min.js'></script>
     <script src='/javascripts/vendor/lodash.min.js'></script>
     <script src='/javascripts/nirc.js'></script>
     <script src='/javascripts/nirc.templates.js'></script>
@@ -36,8 +38,7 @@
           <span class="sender">
             {{event.from.nick}}:
           </span>
-          <span class="message" ng-bind-html="event.message | linky:'_blank'">
-          </span>
+          <span typewrite type-delay="{{event.delay}}" cursor="" blink-cursor="false" text="event.message" class="message"></span>
         </li>
       </ul>
       <!-- user list -->

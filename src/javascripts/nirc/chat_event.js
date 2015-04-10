@@ -4,6 +4,7 @@ angular.module('nirc')
       this.from    = from;
       this.to      = to;
       this.message = text;
+      this.delay = 0;
       this.opts = opts || {};
       this.timestamp = new Date();
     };

@@ -1,4 +1,4 @@
-angular.module('nirc', ['ngSanitize'])
+angular.module('nirc', ['ngSanitize','angularTypewrite'])
   .config(function($locationProvider) {
     $locationProvider.html5Mode(true);
   })
